@@ -1,10 +1,10 @@
-先上效果图：![](https://img-blog.csdnimg.cn/20190213193836680.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI1MjIyMzUx,size_16,color_FFFFFF,t_70)
+
 打开12306查询界面，右键查看元素，转到网络部分。为了方便看清查询过程，我们清空现有的记录。
-![查看查询过程](https://img-blog.csdnimg.cn/20190213194414101.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI1MjIyMzUx,size_16,color_FFFFFF,t_70)
- 查询后可以看到如下信息：![在这里插入图片描述](https://img-blog.csdnimg.cn/2019021319461542.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI1MjIyMzUx,size_16,color_FFFFFF,t_70)
- 发现是通过get方法请求的数据，返回类型为json数据，点开后可以看到请求的地址：https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=2019-02-14&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=SHH&purpose_codes=ADULT
+![查看查询过程](https://img-blog.csdnimg.cn/20190213194414101.JPG)
+ 查询后可以看到如下信息：![在这里插入图片描述](https://img-blog.csdnimg.cn/2019021319461542.JPG)
+ 发现是通过get方法请求的数据，返回类型为json数据，点开后可以看到请求的地址：https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2019-02-14&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=SHH&purpose_codes=ADULT
  返回的文件为：
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213195012508.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI1MjIyMzUx,size_16,color_FFFFFF,t_70)
+ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190213195012508.JPG)
  可以看到车票信息就在返回的json中。
  
 同时发现map中列出的车站和城市是用三个字母表示的，如北京：BJP，上海：SHH等，如果想在客户端中直接查询城市的话还要知道城市和车站的代码。通过这个网址可以得到：
@@ -50,7 +50,7 @@ public class SearchJSON implements Serializable {
 
 
 	public void search() {
-		String url = "https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=" + date
+		String url = "https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=" + date
 				+ "&leftTicketDTO.from_station=" + from + "&leftTicketDTO.to_station=" + to + "&purpose_codes="
 				+ method;
 		// String url
