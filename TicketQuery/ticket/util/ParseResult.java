@@ -12,11 +12,11 @@ public class ParseResult {
             System.out.println("err in parsing json");
             temp_list =null;
         }
-    	System.out.println("³µ´Î\t³ö·¢\tµ½´ï\tÀúÊ±\tÒ»µÈ\t¶şµÈ\tÈíÎÔ\tÓ²ÎÔ\tÓ²×ù\tÎŞ×ù\t¸ß¼¶ÈíÎÔ");
+    	System.out.println("è½¦æ¬¡\tå‡ºå‘\tåˆ°è¾¾\tå†æ—¶\tä¸€ç­‰\täºŒç­‰\tè½¯å§\tç¡¬å§\tç¡¬åº§\tæ— åº§\té«˜çº§è½¯å§");
     	System.out.println("--------------------------------------------------------------------------------------");
         for (int i = 0; i <result.size() ; i++){
             temp_list[i] = result.get(i).split("\\|");
-            System.out.print(temp_list[i][3]+"\t");// ³µ´Î ³ö·¢Ê±¼ä µ½´ïÊ±¼ä ÀúÊ± Ò»µÈ ¶şµÈ ÈíÎÔ Ó²ÎÔ Ó²×ù ÎŞ×ù ¸ß¼¶ÈíÎÔ tmp_list[3],tmp_list[8],tmp_list[9],tmp_list[10],tmp_list[31],tmp_list[30],tmp_list[23],tmp_list[28],tmp_list[29],tmp_list[26],tmp_list[21] 
+            System.out.print(temp_list[i][3]+"\t");// è½¦æ¬¡ å‡ºå‘æ—¶é—´ åˆ°è¾¾æ—¶é—´ å†æ—¶ ä¸€ç­‰ äºŒç­‰ è½¯å§ ç¡¬å§ ç¡¬åº§ æ— åº§ é«˜çº§è½¯å§ tmp_list[3],tmp_list[8],tmp_list[9],tmp_list[10],tmp_list[31],tmp_list[30],tmp_list[23],tmp_list[28],tmp_list[29],tmp_list[26],tmp_list[21] 
             System.out.print(temp_list[i][8]+"\t");
             System.out.print(temp_list[i][9]+"\t");
             System.out.print(temp_list[i][10]+"\t");
