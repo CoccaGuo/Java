@@ -10,7 +10,7 @@ public class SearchJSON implements Serializable {
 	public String from;
 	public String to;
 	public String date;
-	public String method;//成人：ADULT 学生：0X00
+	public String method;//鲁脡脠脣拢潞ADULT 脩搂脡煤拢潞0X00
 	 
 	 public ArrayList<String> result;
 	 public HashMap<String, String> statMap;
